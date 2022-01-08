@@ -1,0 +1,62 @@
+:root {
+  --time: 1.2s;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: blocky;
+  src: url("resources/Nersans\ .otf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #c7b9c1,
+    #a699a0,
+    #877981,
+    #695b63,
+    #4c3f46
+  );
+}
+
+.text-container {
+  position: relative;
+}
+
+span.letter {
+  position: relative;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("images/seeds.jpg");
+  color: transparent;
+  font-size: 20vw;
+  font-family: blocky;
+  font-weight: 900;
+  animation: wave var(--time) ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0em);
+  }
+  20% {
+    transform: translateY(-2rem);
+  }
+  40%,
+  100% {
+    transform: translateY(0em);
+  }
+}
